@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game-Save", "Game-Save\Game-Save.csproj", "{78889815-2E0E-449E-80C7-34BC5C36E263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game-Save.Model", "Game-Save.Model\Game-Save.Model.csproj", "{96322428-7713-493E-AAA4-117C66D2C945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78889815-2E0E-449E-80C7-34BC5C36E263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78889815-2E0E-449E-80C7-34BC5C36E263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78889815-2E0E-449E-80C7-34BC5C36E263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78889815-2E0E-449E-80C7-34BC5C36E263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96322428-7713-493E-AAA4-117C66D2C945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96322428-7713-493E-AAA4-117C66D2C945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96322428-7713-493E-AAA4-117C66D2C945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96322428-7713-493E-AAA4-117C66D2C945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

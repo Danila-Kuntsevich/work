@@ -1,0 +1,64 @@
+﻿<Window x:Class="Game_Save.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Save"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Посчитать" HorizontalAlignment="Left" Margin="39,392,0,0" VerticalAlignment="Top" Command="{Binding Add_Click}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,30,0,0" TextWrapping="Wrap" Text="Количество проживающих" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,60,0,0" TextWrapping="Wrap" Text="Показания по ХВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,90,0,0" TextWrapping="Wrap" Text="Показания по ГВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,120,0,0" TextWrapping="Wrap" Text="Показания по ЭЭ" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,150,0,0" TextWrapping="Wrap" Text="Показания по ЭЭ день" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,180,0,0" TextWrapping="Wrap" Text="Показания по ЭЭ ночь" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="47,210,0,0" TextWrapping="Wrap" Text="Показания по ГВС Теплоноситель" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,240,0,0" TextWrapping="Wrap" Text="Показания по ГВС Тепловая энергия" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding ElectricityDay}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding ElectricityNight}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding DHWСoolant}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding DHWThermalEnergy}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding Living}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding  ColdWater}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding  Hotwater}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+        <TextBox HorizontalAlignment="Left" Margin="249,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text = "{Binding  Electricity}" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="421,30,0,0" TextWrapping="Wrap" Text="Предыдущие показания" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,50,0,0" TextWrapping="Wrap" Text="ХВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,70,0,0" TextWrapping="Wrap" Text="ГВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,90,0,0" TextWrapping="Wrap" Text="ЭЭ" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,112,0,0" TextWrapping="Wrap" Text="ЭЭ день" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,132,0,0" TextWrapping="Wrap" Text="ЭЭ ночь" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,152,0,0" TextWrapping="Wrap" Text="ГВС Теплоноситель" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,172,0,0" TextWrapping="Wrap" Text="ГВС Тепловая энергия" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="563,50,0,0" TextWrapping="Wrap" Text="{Binding Path=first.ColdWater, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,70,0,0" TextWrapping="Wrap" Text="{Binding Path=first.Hotwater, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,90,0,0" TextWrapping="Wrap" Text="{Binding Path=first.Electricity, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,110,0,0" TextWrapping="Wrap" Text="{Binding Path=first.ElectricityDay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,130,0,0" TextWrapping="Wrap" Text="{Binding Path=first.ElectricityNight, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,150,0,0" TextWrapping="Wrap" Text="{Binding Path=first.DHWСoolant, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="563,170,0,0" TextWrapping="Wrap" Text="{Binding Path=first.DHWThermalEnergy, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="47,368,0,0" TextWrapping="Wrap" Text="Итог" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="92,368,0,0" TextWrapping="Wrap" Text="{Binding sum , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,268,0,0" TextWrapping="Wrap" Text="Начисления за каждую услугу" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,288,0,0" TextWrapping="Wrap" Text="ХВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,308,0,0" TextWrapping="Wrap" Text="ГВС" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,328,0,0" TextWrapping="Wrap" Text="ЭЭ" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,350,0,0" TextWrapping="Wrap" Text="ЭЭ день" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,370,0,0" TextWrapping="Wrap" Text="ЭЭ ночь" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,390,0,0" TextWrapping="Wrap" Text="ГВС Теплоноситель" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="412,410,0,0" TextWrapping="Wrap" Text="ГВС Тепловая энергия" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,288,0,0" TextWrapping="Wrap" Text="{Binding xvs, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,308,0,0" TextWrapping="Wrap" Text="{Binding gvs , UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,328,0,0" TextWrapping="Wrap" Text="{Binding ee,  UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,348,0,0" TextWrapping="Wrap" Text="{Binding eeDay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,368,0,0" TextWrapping="Wrap" Text="{Binding eeNight, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,388,0,0" TextWrapping="Wrap" Text="{Binding gvsCoolant, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,408,0,0" TextWrapping="Wrap" Text="{Binding gvsThermalEnergy,  UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,4,0,0" TextWrapping="Wrap" Text="Впишите данные если есть прибор учета , в противном случае оставьте поле пустым" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
